@@ -55,7 +55,7 @@ function getInfoApi(){
 
 }
 
-
+// hide/show footer saw it on https://stackoverflow.com/questions/14551800/hide-a-fixed-footer
 $("#myButton").click(function(){
     
     if($("#footer").is(":visible")){
