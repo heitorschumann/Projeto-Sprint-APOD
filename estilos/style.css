@@ -90,11 +90,17 @@ label{
     margin: 45px auto;
 }
 
-#image, #video{
+#image{
     border: 5px solid rgb(0, 0, 0);
     max-width: 1000px;
     height: 90vh;
 } 
+
+#video{
+    border: 5px solid rgb(0, 0, 0);
+    width: 100vh;
+    height: 70vh;
+}
 
 #picTaken{
     height: fit-content;
