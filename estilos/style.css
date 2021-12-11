@@ -37,9 +37,9 @@ main{
 .inputField{
     margin: 15px auto;
     width: fit-content;
-    padding: 5px;
+    padding: 10px;
     background-color: white;
-    border: 3px solid black;
+    border: 5px solid black;
 }
 
 label{
@@ -52,9 +52,9 @@ label{
 #datePicker{
     height: 30px;
     width: 135px;
+    margin: 5px;
     text-align: center;
     font-size: 15px;
-    /* border-radius: 15px; */
     border: 2px solid black;
     font-family: 'Bebas Neue', cursive;
 }
@@ -62,10 +62,11 @@ label{
 #submitDate{
     height: 36px;
     width: 80px;
+    margin: 5px;
     font-size: 15px;
-    /* border-radius: 15px; */
     border: 2px solid black;
     font-family: 'Bebas Neue', cursive;
+    transition: 600ms;
 }
 
 #submitDate:hover{
@@ -92,7 +93,7 @@ label{
 #image, #video{
     border: 5px solid rgb(0, 0, 0);
     max-width: 1000px;
-    height: 100vh;
+    height: 90vh;
 } 
 
 #picTaken{
@@ -131,23 +132,21 @@ label{
     display: none;
 }
 
-#myButton{
+#footerBtn{
     background-color: white;
     font-family: 'Bebas Neue', cursive;
     border: 2px solid black;
     position:fixed;
     right: 0;
-    bottom: 60px;
-}
-
-#myButton:hover{
-    transform: scale(1.1);
+    bottom: 0px;
+    height: 56px;
+    width:3%;
 }
 
 footer{
     background-image: url(../img/sky-space-dark-galaxy.jpg);
     margin-top: 80px;
-    width: 100%;
+    width: 95%;
     height: fit-content;
     padding: 20px;
     color: white;

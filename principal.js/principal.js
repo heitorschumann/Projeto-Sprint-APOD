@@ -7,6 +7,7 @@ const picDate = $("#picTaken")
 const divTxt = $("#texts");
 const explanation = $("#explanation");
 const credits = $("#credits");
+const footerBtn = $("#footerBtn");
 const footer = $("#footer");
 
 let objAPOD;
@@ -16,6 +17,16 @@ let objAPOD;
 button.click(function(event){
     event.preventDefault();
     getInfoApi();
+});
+
+// hide/display the footer
+footerBtn.click(function(){
+    if(footer.is(":visible")){
+        footer.hide(600);
+
+    }else{
+        footer.show(600); 
+    }
 });
 
 
@@ -47,22 +58,17 @@ function getInfoApi(){
             mediaField.html(`<img id="image" src="${objAPOD.url}" alt=""></img> `)
         }else{
             mediaField.html(`<iframe id="video" src="${objAPOD.url}" alt=""></img>`)
-        }
-        
+        }    
+    },
+    error: function(result) {
+        objAPOD = result;
+        console.log(objAPOD);
+        title.html(`Error: ${objAPOD.status} ${objAPOD.statusText}`);
+        title.removeClass("hide");
+        credits.html(objAPOD.responseJSON.msg);
+        divTxt.removeClass("hide");
     }
 
 })
 
 }
-
-// hide/show footer saw it on https://stackoverflow.com/questions/14551800/hide-a-fixed-footer
-$("#myButton").click(function(){
-    
-    if($("#footer").is(":visible")){
-        $("#footer").hide(500);
-
-    }else{
-        $("#footer").show(500); 
-    }
-});
-
