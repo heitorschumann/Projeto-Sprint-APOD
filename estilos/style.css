@@ -146,13 +146,13 @@ label{
     right: 0;
     bottom: 0px;
     height: 56px;
-    width:3%;
+    width: 3vw;
 }
 
 footer{
     background-image: url(../img/sky-space-dark-galaxy.jpg);
     margin-top: 80px;
-    width: 95%;
+    width: 95vw;
     height: fit-content;
     padding: 20px;
     color: white;
